@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Background Image */
+        body {
+            background-image: url('C:/Users/d_par/OneDrive/Desktop/Danny/2024/Data Science/Portfolio/Website/background.jpg'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            color: #ffffff; /* Ensure text contrasts against background */
+        }
+
+        /* About Section Styling */
+        .about-section {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .about-section img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .about-section h2 {
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #ffffff; /* Ensure text is readable */
+        }
+
+        .about-section p {
+            font-size: 16px;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #ffffff; /* Ensure text is readable */
+        }
+
+        /* Project Section Styling */
+        .project-card {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-title {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .card-text {
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Skills Section Styling */
+        #skills {
+            background-color: rgba(255, 255, 255, 0.85); /* Slightly transparent background for readability */
+            padding: 60px 0;
+            color: #343a40; /* Text color for contrast */
+        }
+
+        #skills h2 {
+            font-weight: bold;
+            font-size: 2.5rem;
+        }
+
+        .skill-card {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        .skill-icon {
+            width: 80px;
+            height: 80px; /* Set a fixed height to align titles */
+            object-fit: contain; /* Ensure icons scale within the container */
+            transition: transform 0.3s ease;
+            margin: 0 auto;
+        }
+
+        .skill-title {
+            font-size: 1.25rem;
+            color: #007bff;
+            margin-top: 10px;
+            min-height: 40px; /* Ensures uniform height for all titles */
+        }
+
+        .skill-description {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin: 10px 0;
+            min-height: 40px; /* Ensure all descriptions have consistent height */
+        }
+
+        /* Sticky Navigation Bar */
+        .navbar {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 9999; /* Ensure the navbar stays on top of other elements */
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff !important;
+            margin-right: 15px;
+            transition: color 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ff007f !important; /* Add a hover effect color to match your theme */
+        }
+
+        /* Add padding to the top of sections to account for the navbar height */
+        section {
+            padding-top: 70px;
+            scroll-margin-top: 70px; /* Adjust for smooth scroll to account for the navbar height */
+        }
+
+        /* Contact Section */
+        .social-icons a {
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .social-icons img.social-icon {
+            width: 50px; /* Constrain the width */
+            height: 50px; /* Constrain the height */
+            border-radius: 50%;
+            background-color: #ff007f; /* Pinkish background similar to your image */
+            padding: 10px;
+            transition: transform 0.3s ease;
+            margin-bottom: 5px;
+        }
+
+        .social-icons img.social-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .social-icons p {
+            margin-top: 10px;
+            color: #ff007f; /* Matches the icon background */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <!-- This section acts as a top anchor point for the Home link -->
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About</h2>
+            <img src="C:/Users/d_par/OneDrive/Desktop/Danny/Personal details/me.png" alt="Your Picture">
+            <p>Hi, I'm Danny, a passionate Analyst with experience in Banking and Business Consultancy. I specialize in Data Analytics, and I'm driven by a desire to create impactful and innovative solutions. With a strong background in Computer Science, I am committed to delivering exceptional results in every project I undertake.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="my-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Projects</h2>
+            <div class="row">
+                <!-- Project 1 -->
+                <div class="col-md-4">
+                    <div class="card project-card">
+                        <img src="C:/Users/d_par/OneDrive/Desktop/Danny/2024/Data Science/Portfolio/Website/icons/football.jfif" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 1</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl erat. Sed et purus ornare, eleifend tellus ut, fermentum arcu.</p>
+                            <a href="https://github.com/yourusername/project1-repo" class="btn btn-primary" target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="col-md-4">
+                    <div class="card project-card">
+                        <img src="C:/Users/d_par/OneDrive/Desktop/Danny/2024/Data Science/Portfolio/Website/icons/biodiversity.png" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 2</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl erat. Sed et purus ornare, eleifend tellus ut, fermentum arcu.</p>
+                            <a href="https://github.com/yourusername/project2-repo" class="btn btn-primary" target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="col-md-4">
+                    <div class="card project-card">
+                        <img src="C:/Users/d_par/OneDrive/Desktop/Danny/2024/Data Science/Portfolio/Website/icons/question.png" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 3</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl erat. Sed et purus ornare, eleifend tellus ut, fermentum arcu.</p>
+                            <a href="https://github.com/yourusername/project3-repo" class="btn btn-primary" target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="my-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Skills</h2>
+            <div class="row text-center">
+                <!-- Skill 1: SQL -->
+                <div class="col-md-2 offset-md-1">
+                    <div class="skill-card p-4">
+                        <img src="C:/Users/d_par/OneDrive/Desktop/Danny/2024/Data Science/Portfolio/Website/images/skills/SQL.jfif" alt="SQL" class="img-fluid mb-3 skill-icon">
+                        <h5 class="skill-title">SQL</h5>
+                        <p class="skill-description">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+                <!-- Skill 2: Python -->
+                <div class="col-md-2">
+                    <div class="skill-card p-4">
+                        <img src="C:/Users/d_par/OneDrive/Desktop/Danny/2024/Data Science/Portfolio/Website/images/skills/Python.jfif" alt="Python" class="img-fluid mb-3 skill-icon">
+                        <h5 class="skill-title">Python</h5>
+                        <p class="skill-description">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+                <!-- Skill 3: Excel -->
+                <div class="col-md-2">
+                    <div class="skill-card p-4">
+                        <img src="C:/Users/d_par/OneDrive/Desktop/Danny/2024/Data Science/Portfolio/Website/images/skills/Excel.png" alt="Excel" class="img-fluid mb-3 skill-icon">
+                        <h5 class="skill-title">Excel</h5>
+                        <p class="skill-description">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+                <!-- Skill 4: Tableau -->
+                <div class="col-md-2">
+                    <div class="skill-card p-4">
+                        <img src="C:/Users/d_par/OneDrive/Desktop/Danny/2024/Data Science/Portfolio/Website/images/skills/Tableau.png" alt="Tableau" class="img-fluid mb-3 skill-icon">
+                        <h5 class="skill-title">Tableau</h5>
+                        <p class="skill-description">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+                <!-- Skill 5: Data Storytelling -->
+                <div class="col-md-2">
+                    <div class="skill-card p-4">
+                        <img src="C:/Users/d_par/OneDrive/Desktop/Danny/2024/Data Science/Portfolio/Website/images/skills/Storytelling.png" alt="Data Storytelling" class="img-fluid mb-3 skill-icon">
+                        <h5 class="skill-title">Data Storytelling</h5>
+                        <p class="skill-description">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Me Section -->
+    <section id="contact" class="py-5" style="background-color: #000; color: #fff;">
+        <div class="container text-center">
+            <h2 class="mb-4">Contact Me</h2>
+            <p>
+                <a href="mailto:d_partington@hotmail.com" style="color: #fff; text-decoration: none;">
+                    <i class="fas fa-envelope"></i> d_partington@hotmail.com
+                </a>
+            </p>
+            <p>
+                <a href="tel:+44 7564444937" style="color: #fff; text-decoration: none;">
+                    <i class="fas fa-phone"></i> +44 7564444937
+                </a>
+            </p>
+            <div class="social-icons mt-4">
+                <div class="row justify-content-center">
+                    <!-- LinkedIn -->
+                    <div class="col-2">
+                        <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="d-block">
+                            <img src="C:/Users/d_par/OneDrive/Desktop/Danny/2024/Data Science/Portfolio/Website/contacts/linkedin.png" alt="LinkedIn" class="social-icon">
+                            <p style="color: #fff;">LinkedIn</p>
+                        </a>
+                    </div>
+                    <!-- GitHub -->
+                    <div class="col-2">
+                        <a href="https://github.com/your-username" target="_blank" class="d-block">
+                            <img src="C:/Users/d_par/OneDrive/Desktop/Danny/2024/Data Science/Portfolio/Website/contacts/github.png" alt="GitHub" class="social-icon">
+                            <p style="color: #fff;">GitHub</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Smooth Scrolling Script -->
+    <script>
+        document.querySelectorAll('a.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.amazonaws.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
